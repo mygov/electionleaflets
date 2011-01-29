@@ -16,9 +16,9 @@
             Lisa Cross, Matt Joyce, Matthew Landauer and Teresa Leung.  The Australian site, in turn, was adapted from the UK's <a href="http://www.thestraightchoice.org/about.php">TheStraightChoice.org</a> built by Julian Todd,
             Richard Pope and Francis Irving.
         </p>
-        <!-- <p>
-            Our version of the code has been deposited for your viewing and repurposing pleasure at <a href="http://github.com/openaustralia/electionleaflets">http://github.com/openaustralia/electionleaflets</a>.
-        </p> -->
+        <p>
+            Our version of the code has been deposited for your viewing and repurposing pleasure at <a href="http://github.com/mygov/electionleaflets">http://github.com/mygov/electionleaflets</a>.
+        </p>
         <h4>FAQs</h4>
         <dl class="faq">
             <dt>How do I upload an election leaflet</dt>
