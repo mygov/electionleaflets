@@ -1,0 +1,66 @@
+server {
+	server_name electionleaflets.yourdomain.tld;
+
+        access_log  /var/log/nginx/electionleaflets.log  main;
+
+        #error_page  404              /index.php;
+
+        location ~* ^.+.(jpg|jpeg|gif|css|png)$ {
+            root              /path/to/site/electionleaflets/docs;
+            #access_log        off;
+            expires           30d;
+
+        }
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+
+        location ~ .php$ {
+          fastcgi_pass   127.0.0.1:3000;  # Point this at your long-running php-fastcgi processes
+          fastcgi_index  index.php;
+          fastcgi_param SCRIPT_FILENAME  /path/to/site/electionleaflets/docs$fastcgi_script_name;
+	  include /etc/nginx/fastcgi_params;
+        }
+
+        location / {
+            root   /path/to/site/electionleaflets/docs;
+            index  index.php index.html;
+
+            if (!-e $request_filename) {
+                rewrite ^/parties/?$ /parties.php last;
+                rewrite ^/parties/([^/]+)/?$ /leaflets.php?p=$1 last;
+                rewrite ^/parties/([^/]+)/rss/?$ /leaflets.php?p=$1&rss=1 last;
+                rewrite ^/parties/([^/]+)/stats/?$ /stats.php?p=$1 last;
+                rewrite ^/constituencies/?$ /constituencies.php last;
+                rewrite ^/constituencies/([^/]+)/?$ /leaflets.php?n=$1 last;
+                rewrite ^/constituencies/([^/]+)/rss/?$ /leaflets.php?n=$1&rss=1 last;
+                rewrite ^/electorates/?$ /constituencies.php last;
+                rewrite ^/electorates/([^/]+)/?$ /leaflets.php?n=$1 last;
+                rewrite ^/electorates/([^/]+)/rss/?$ /leaflets.php?n=$1&rss=1 last;
+                rewrite ^/leaflets/?$ /leaflets.php last;
+                rewrite ^/leaflets/rss/?$ /leaflets.php?rss=1 last;
+                rewrite ^/leaflets/([0-9]+)/?$ /leaflet.php?q=$1 last;
+                rewrite ^/categories/?$ /categories.php last;
+                rewrite ^/categories/([0-9]+)/?$ /leaflets.php?c=$1 last;
+                rewrite ^/categories/([0-9]+)/rss/?$ /leaflets.php?c=$1&rss=1 last;
+                rewrite ^/tags/?$ /tags.php last;
+                rewrite ^/tags/([^/]+)/?$ /leaflets.php?t=$1 last;
+                rewrite ^/tags/([^/]+)/rss/?$ /leaflets.php?t=$1&rss=1 last;
+                rewrite ^/browse/?$ /browse.php last;
+                rewrite ^/addupload/?$ /addupload.php last;
+                rewrite ^/report/?$ /report.php last;
+                rewrite ^/alerts/create/?$ /alerts/create.php last;
+                rewrite ^/about/?$ /about.php last;
+                rewrite ^/notspots/?$ /notspots.php last;
+                rewrite ^/random/?$ /random.php last;
+                rewrite ^/analysis/?$ /allstats.php last;
+              break;
+            }
+	}
+    }
+
+
