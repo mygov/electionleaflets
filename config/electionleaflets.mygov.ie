@@ -1,3 +1,18 @@
+####
+#
+# So you'll want to have all your URL rewriting set up somehow if you're not using apache2
+#
+# Here's an example server vhost config
+#
+#
+#
+###
+
+
+
+
+
+
 server {
 	server_name electionleaflets.yourdomain.tld;
 
