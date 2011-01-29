@@ -17,13 +17,8 @@
                 <li>
                     <label for="txtDescription">Enter a transcript of the main points / first paragraph</label>
                     <textarea type="text" id="txtDescription" name="txtDescription" {if $warn_txtDescription}class="error"{/if} cols="70" rows="5">{$data.txtDescription}</textarea>
-                    <br/>
+                    <input type="hidden" id="txtPostcode" name="txtPostcode" value="NONE" /><br/>
                     <strong>Note: please only add what is actually on the leaflet, not your opinion of it.</strong>
-                </li>
-                <li>
-                    <label for="txtPostcode">Which postcode was the leaflet delivered to? *</label>
-                    <input type="text" id="txtPostcode" name="txtPostcode" {if $warn_txtPostcode}class="error"{/if} value="{$data.txtPostcode}"/>
-                    <small>this will let us work out which electorate the leaflet covers</small>
                 </li>
                 <li>
                     <label for="ddlConstituency">Which electorate was the leaflet delivered to?</label>
@@ -33,7 +28,7 @@
                             <option value="{$constituency->name}" {if $data.ddlConstituency == $constituency->name}selected="selected"{/if}>{$constituency->name}</option>
                         {/foreach}
                     </select>
-                    <small>please select one if we can't work out the electorate from the postcode alone</small>
+                    <small>please select one</small>
                 </li>
                 <li>
                     <label for="ddlDelivered">When was the leaflet delivered? *</label>

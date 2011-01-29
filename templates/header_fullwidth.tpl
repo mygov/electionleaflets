@@ -10,7 +10,7 @@
 	<script src="{$www_server}/script/jcarousel.js" type="text/javascript" charset="utf-8"></script>
 	<script src="{$www_server}/script/functions.js" type="text/javascript"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js" type="text/javascript"></script>
-	<link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 	{if $has_upload}
 	  <script src="{$www_server}/script/jquery.uploadify.v2.1.0.min.js" type="text/javascript"></script>
 	  <script src="{$www_server}/script/jquery.json-2.2.min.js" type="text/javascript"></script>
@@ -45,9 +45,9 @@
 
             {if $hide_logo == false}
 	      <div id="pLogo">
-		<h2><a href="{$www_server}">OpenAustralia Foundation Presents</h2>
+		<h2><a href="{$www_server}">KildareStreet Presents</h2>
                 <h1><a href="{$www_server}">{$site_name}</a></h1>
-                <h2><a href="{$www_server}">2010 FEDERAL ELECTION Live <span>|</span> election monitoring</a></h2>
+                <h2><a href="{$www_server}">2011 GENERAL ELECTION Live <span>|</span> election monitoring</a></h2>
 	      </div>
             {/if}
         

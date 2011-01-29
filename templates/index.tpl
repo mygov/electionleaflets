@@ -7,13 +7,13 @@
     	<h3 class="light">before you vote</h3>
         <p>
             Election leaflets are one of the main weapons in the fight 
-for votes in Australia.
+for votes.
         </p>
         <p>
             They are targeted, effective and sometimes very bitter. 
         </p>
         <p>
-            We need <strong>your help</strong> to photograph and map them so we can keep 
+            We need <strong>your help</strong> to photograph, scan and record them so we can keep 
 an eye on what the parties are up to, and try to keep them honest.
         </p><br/>
         <p id="pCount">
@@ -23,14 +23,14 @@ an eye on what the parties are up to, and try to keep them honest.
     </div>
     <div class="rightcolumn">
     <div id="calltoactions">
-    <div class="divider"><img class="left" width="110" height="42" src="/images/crease_line_left.png"/><img class="middle" width="75" height="42" src="/images/crease_line_middle.png"/><img class="right" width="75" height="42" src="/images/crease_line_right.png"/></div>
-	    <div id="divFrontLookup">
+    <div class="divider">{* <img class="left" width="110" height="42" src="/images/crease_line_left.png"/><img class="middle" width="75" height="42" src="/images/crease_line_middle.png"/><img class="right" width="75" height="42" src="/images/crease_line_right.png"/>*}</div>
+	    {* <div id="divFrontLookup">
 			<h4>View leaflets in your area</h4>
 	         <form method="get" action="{$www_server}/{$area_names}/">
 	             <input id="txtSearch" name="p" value="Enter postcode" type="text" onfocus="value=''"><input type="image" src="{$www_server}/images/search_button.png" class="button" value="GO" type="submit">                    
 	         </form>
 	     </div>
-	     
+	     *}
 	     <div id="divAction">
 	     	<h4>Add a leaflet</h4>
 	        <div class="add upload" onclick="window.location = '{$www_server}/addupload';">
@@ -41,16 +41,17 @@ an eye on what the parties are up to, and try to keep them honest.
 	            <span class="add-title"><a href="mailto:{$leaflets_email}">Email them straight from your phone</a></span>
 	            <p><a href="mailto:{$leaflets_email}">{$leaflets_email}</a></p>
 	        </div>
-	        <div class="add post">
+	        <!-- <div class="add post">
 	            <span class="add-title">Or <a href="/about#post">post them to us</a> if you don't have a camera or scanner</span>
-	        </div>
+	        </div> 
+	        -->
 	     </div>
      </div>
      </div>
      <br class="clear">
      <div id="divRecentLeaflets">
         <h4>Latest leaflets</h4><span class="orange-divider"> | </span><h4><a class="browse-leaflets" href="{$www_server}/browse">Browse leaflets</a></h4>
-        <div id="divScroller"> {* TODO: update this div from Jack's work *}
+        <div id="divScroller"> {* TODO: update this div from Jacks work *}
             <a id="btnPrevious" href="#"><img src="{$www_server}/images/arrow_left.png" alt="Previous"/></a>
             <a id="btnNext" href="#"><img src="{$www_server}/images/arrow_right.png" alt="Next"/></a>            
             <ul class="results">

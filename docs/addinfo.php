@@ -1,4 +1,5 @@
 <?php
+set_include_path('.:/home/genghis/sites/electionleaflets/includes:/home/genghis/sites/electionleaflets/includes/PEAR:/home/genghis/sites/electionleaflets/config');
 require_once('init.php');
 
 class addinfo_page extends pagebase {
@@ -110,8 +111,9 @@ class addinfo_page extends pagebase {
 			$this->add_warning('Please add a valid email address');
 			$this->add_warn_control('txtEmail');
 		}
+		$name = $this->data['ddlConstituency'];
 		//TODO: handle non-UK postcodes
-		if(!isset($this->data['txtPostcode']) || $this->data['txtPostcode'] ==''){
+		/*if(!isset($this->data['txtPostcode']) || $this->data['txtPostcode'] ==''){
 			$this->add_warning('Please add a post code for this leaflet');
 			$this->add_warn_control('txtPostcode');
 		} else if(!is_postcode($this->data['txtPostcode'])){
@@ -127,7 +129,7 @@ class addinfo_page extends pagebase {
             }else{
                 $this->lng = $geocoder->lng;
                 $this->lat = $geocoder->lat;
-            }
+            } 
             
             //Convert postcode to electorate
             $australian_postcode = factory::create('australian_postcode');
@@ -149,7 +151,7 @@ class addinfo_page extends pagebase {
                     $this->add_warning("The postcode is in more than one electorate. Please select the electorate. Hint: it's either " . join(" or ", $names));
                     $this->add_warn_control('ddlConstituency');
                 }
-            }
+            }*/
             if ($name) {
                 $search = factory::create('search');
                 $result = $search->search("constituency", array(array("name", "=", $name)));
@@ -157,7 +159,7 @@ class addinfo_page extends pagebase {
                     $this->constituency_id = $result[0]->constituency_id;
                 }
             }
-        }
+        
 
         return count($this->warnings) == 0;
     }

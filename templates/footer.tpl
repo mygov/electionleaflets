@@ -7,8 +7,8 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/about#contact">Contact</a></li>
-		<li><a href="http://twitter.com/electionleaflet">Twitter</a></li>
-		<li class="last"><a href="http://blog.openaustralia.org">Blog</a></li>
+		<li><a href="http://twitter.com/ge11leaflets">Twitter</a></li>
+		<li class="last"><a href="http://www.kildarestreet.com">Check up on your local TDs</a></li>
             </ul>
         </div>
     </div>

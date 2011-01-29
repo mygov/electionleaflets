@@ -10,7 +10,7 @@
 	<script src="{$www_server}/script/jcarousel.js" type="text/javascript" charset="utf-8"></script>
 	<script src="{$www_server}/script/functions.js" type="text/javascript"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js" type="text/javascript"></script>
-	<link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 	{if $has_upload}
 	  <script src="{$www_server}/script/jquery.uploadify.v2.1.0.min.js" type="text/javascript"></script>
 	  <script src="{$www_server}/script/jquery.json-2.2.min.js" type="text/javascript"></script>
@@ -44,10 +44,10 @@
 	  <div id="divHeader"{if $hide_logo == true} class="small"{/if}>
 
             {if $hide_logo == false}
-           <p class="credit">The <a href="http://www.openaustraliafoundation.org.au">OpenAustralia Foundation</a> presents:</p>
+           <p class="credit"><a href="http://www.kildarestreet.com">KildareStreet</a> presents:</p>
 	      <div id="pLogo" onclick="window.location = '{$www_server}';">
                 <h1><a href="{$www_server}">{$site_name}</a></h1>
-                <h2><a href="{$www_server}"><strong>2010</strong> FEDERAL ELECTION <span>|</span> live election monitoring</a></h2>
+                <h2><a href="{$www_server}"><strong>2011</strong> GENERAL ELECTION <span>|</span> live election monitoring</a></h2>
 	      </div>
             {/if}
         	<div class="divider top-nav"><img class="left" width="110" height="42" src="/images/crease_line_left.png"/><img class="middle" width="75" height="42" src="/images/crease_line_middle.png"/><img class="right" width="75" height="42" src="/images/crease_line_right.png"/></div>
@@ -72,18 +72,18 @@
                       Browse
                   </a>
               </li>
-              <li>
+              {* <li>
                   <a href="{$www_server}/map/leaflets/">
                       Map
                   </a>
               </li>
-              <!--
+              
               <li>
                   <a href="{$www_server}/analysis/">
                       Analysis
                   </a>
-              </li>
-              -->
+              </li> *}
+              
             </ul>
             <div id="header-border"><img src="/images/header_orange_line.png" /></div>
         </div>

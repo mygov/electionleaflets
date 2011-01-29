@@ -39,9 +39,9 @@
         </ul>
         {/if}
 
-        <h4>Location (approximate)</h4>
-        <div id="divSpotMap"></div>
-    </div>
+        {* <h4>Location (approximate)</h4>
+        <div id="divSpotMap"></div>*}
+    </div> 
 
     <div class="contentright">
         <ul>

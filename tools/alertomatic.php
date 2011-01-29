@@ -4,7 +4,7 @@
     select * from email_alert where hour(timediff(now(), last_sent)) >= frequency_hours
 */
 
-define('ALERT_DEBUG', 0);
+define('ALERT_DEBUG', 1);
 // when this script runs it will update the 'lastsent' field of each alert processed
 // it's useful to disbale that during testing.  0=allow update, 1= no update
 define('ALERT_DEBUG_LASTSENT_NO_UPDATE', 0);

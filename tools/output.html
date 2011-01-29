@@ -1,0 +1,115 @@
+<pre>URL:		None - running from command line?
+Referer:	None
+REMOTE IP:	None
+SERVER_ADDR:	None
+REQUEST METHOD:	None
+User-Agent:	None
+Number:		2
+Type:		Warning
+Message:	imap_open(): Couldn't open stream {imap.gmail.com:993:993/imap/ssl/notls/novalidate-cert}
+File:		/home/genghis/sites/electionleaflets/includes/mail_image.php
+Line:		21
+
+Source:
+
+19 
+20     public function fetch ($delete = false) {
+<b>21         $oImap = imap_open('{'. $this->mail_server.':993/imap/ssl/notls/novalidate-cert}', $this->username, $this->password);
+</b>22 
+23         $oMailboxStatus = imap_check($oImap);
+
+Backtrace:
+ <pre align=left>  imap_open({imap.gmail.com:993:993/imap/ssl/notls/novalidate-cert}, electionleafletsireland@gmail.com, 3d1n8ur9h)</font><font color=#808080 size=-1> # line   21, file: <a href="file:///home/genghis/sites/electionleaflets/includes/mail_image.php">/home/genghis/sites/electionleaflets/includes/mail_image.php</a></font>
+MailImage.fetch(true)</font><font color=#808080 size=-1> # line   16, file: <a href="file:///home/genghis/sites/electionleaflets/tools/import_mail.php">/home/genghis/sites/electionleaflets/tools/import_mail.php</a></font>
+</pre></pre><pre>URL:		None - running from command line?
+Referer:	None
+REMOTE IP:	None
+SERVER_ADDR:	None
+REQUEST METHOD:	None
+User-Agent:	None
+Number:		2
+Type:		Warning
+Message:	imap_check(): supplied argument is not a valid imap resource
+File:		/home/genghis/sites/electionleaflets/includes/mail_image.php
+Line:		23
+
+Source:
+
+21         $oImap = imap_open('{'. $this->mail_server.':993/imap/ssl/notls/novalidate-cert}', $this->username, $this->password);
+22 
+<b>23         $oMailboxStatus = imap_check($oImap);
+</b>24         $aMessages = imap_fetch_overview($oImap, "1:{$oMailboxStatus->Nmsgs}");
+25 
+
+Backtrace:
+ <pre align=left>  imap_check(false)</font><font color=#808080 size=-1> # line   23, file: <a href="file:///home/genghis/sites/electionleaflets/includes/mail_image.php">/home/genghis/sites/electionleaflets/includes/mail_image.php</a></font>
+MailImage.fetch(true)</font><font color=#808080 size=-1> # line   16, file: <a href="file:///home/genghis/sites/electionleaflets/tools/import_mail.php">/home/genghis/sites/electionleaflets/tools/import_mail.php</a></font>
+</pre></pre><pre>URL:		None - running from command line?
+Referer:	None
+REMOTE IP:	None
+SERVER_ADDR:	None
+REQUEST METHOD:	None
+User-Agent:	None
+Number:		2
+Type:		Warning
+Message:	imap_fetch_overview(): supplied argument is not a valid imap resource
+File:		/home/genghis/sites/electionleaflets/includes/mail_image.php
+Line:		24
+
+Source:
+
+22 
+23         $oMailboxStatus = imap_check($oImap);
+<b>24         $aMessages = imap_fetch_overview($oImap, "1:{$oMailboxStatus->Nmsgs}");
+</b>25 
+26         $validMessages = array();
+
+Backtrace:
+ <pre align=left>  imap_fetch_overview(false, 1:)</font><font color=#808080 size=-1> # line   24, file: <a href="file:///home/genghis/sites/electionleaflets/includes/mail_image.php">/home/genghis/sites/electionleaflets/includes/mail_image.php</a></font>
+MailImage.fetch(true)</font><font color=#808080 size=-1> # line   16, file: <a href="file:///home/genghis/sites/electionleaflets/tools/import_mail.php">/home/genghis/sites/electionleaflets/tools/import_mail.php</a></font>
+</pre></pre><pre>URL:		None - running from command line?
+Referer:	None
+REMOTE IP:	None
+SERVER_ADDR:	None
+REQUEST METHOD:	None
+User-Agent:	None
+Number:		2
+Type:		Warning
+Message:	Invalid argument supplied for foreach()
+File:		/home/genghis/sites/electionleaflets/includes/mail_image.php
+Line:		28
+
+Source:
+
+26         $validMessages = array();
+27 
+<b>28         foreach ($aMessages as $oMessage) {
+</b>29             
+30             print "Trying message '" . $oMessage->subject . "'";
+
+Backtrace:
+ <pre align=left>MailImage.fetch(true)</font><font color=#808080 size=-1> # line   16, file: <a href="file:///home/genghis/sites/electionleaflets/tools/import_mail.php">/home/genghis/sites/electionleaflets/tools/import_mail.php</a></font>
+</pre></pre><pre>URL:		None - running from command line?
+Referer:	None
+REMOTE IP:	None
+SERVER_ADDR:	None
+REQUEST METHOD:	None
+User-Agent:	None
+Number:		2
+Type:		Warning
+Message:	imap_close(): supplied argument is not a valid imap resource
+File:		/home/genghis/sites/electionleaflets/includes/mail_image.php
+Line:		104
+
+Source:
+
+102         }
+103 
+<b>104         imap_close($oImap, CL_EXPUNGE);
+</b>105 
+106         $this->messages = $validMessages;
+
+Backtrace:
+ <pre align=left>  imap_close(false, 32768)</font><font color=#808080 size=-1> # line  104, file: <a href="file:///home/genghis/sites/electionleaflets/includes/mail_image.php">/home/genghis/sites/electionleaflets/includes/mail_image.php</a></font>
+MailImage.fetch(true)</font><font color=#808080 size=-1> # line   16, file: <a href="file:///home/genghis/sites/electionleaflets/tools/import_mail.php">/home/genghis/sites/electionleaflets/tools/import_mail.php</a></font>
+</pre></pre>
