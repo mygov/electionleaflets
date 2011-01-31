@@ -104,7 +104,7 @@ abstract class pagebase {
         $this->smarty->assign("show_warnings", sizeof($this->warnings) >0);
         $this->smarty->assign("show_messages", sizeof($this->messages) >0);
         $this->smarty->assign("warn_controls", $this->warn_controls);        
-		$this->smarty->assign("page_title", htmlspecialchars($this->page_title));
+		$this->smarty->assign("page_title", stripslashes(htmlspecialchars($this->page_title)));
 		$this->smarty->assign("menu_item", $this->menu_item);		
 		$this->smarty->assign("tracker_location", $this->tracker_location);				
 		$this->smarty->assign("show_tracker",$this->show_tracker);				

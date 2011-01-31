@@ -21,7 +21,7 @@
                     <strong>Note: please only add what is actually on the leaflet, not your opinion of it.</strong>
                 </li>
                 <li>
-                    <label for="ddlConstituency">Which electorate was the leaflet delivered to?</label>
+                    <label for="ddlConstituency">Which constituency was the leaflet delivered to?</label>
                     <select id="ddlConstituency" name="ddlConstituency" {if $warn_ddlConstituency}class="error"{/if}>
                         <option></option>
                         {foreach from="$constituencies" item="constituency"}
