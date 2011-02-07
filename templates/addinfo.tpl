@@ -101,7 +101,7 @@
                     <label for="txtName">Enter your name and email address *</label>
                     <input type="text" id="txtName" name="txtName" value="{$data.txtName}"/>
                     <input type="text" id="txtEmail" name="txtEmail" value="{$data.txtEmail}"/>
-                    <small>Your email address will not be made public</small>                                   
+                    <small>Your email address will not be made public. We will not use your address except to contact you if there's a problem with this upload.</small>                                   
                 </li>
             </ul>
         </fieldset>

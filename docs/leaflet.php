@@ -44,6 +44,8 @@ class leaflet_page extends pagebase {
 		    throw_404();
 	    }else{
 	        $leaflet = $result[0];
+	        $leaflet->title = stripslashes($leaflet->title);
+	        $leaflet->description = stripslashes($leaflet->description);
         }
 
         //get images

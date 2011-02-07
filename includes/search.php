@@ -110,7 +110,13 @@ class searcher {
 		$found_objects = array();
 		if($search_count > 0){
 			while($search_object->fetch()){
-				array_push($found_objects, clone($search_object));
+				if ($search_object->title) {
+				        $search_object->title = stripslashes($search_object->title);
+				}
+				if ($search_object->description) {
+				        $search_object->description = stripslashes($search_object->description);
+				}
+			        array_push($found_objects, clone($search_object));
 			}
 			$return = $found_objects;
 		}
@@ -202,6 +208,12 @@ class searcher {
 		$result = $search->search($class_name, array(array($keys[0], '=', $id)));
 
 		if(sizeof($result) == 1){
+		        if ($result[0]->title) {
+		                $result[0]->title = stripslashes($result[0]->title);
+		        }
+			if ($result[0]->description) {
+		                $result[0]->description = stripslashes($result[0]->description);
+		        }
 			$return = $result[0];
 		}
 		

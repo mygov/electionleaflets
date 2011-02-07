@@ -23,7 +23,7 @@
                             <!-- <img src="{$www_server}/image.php?i={$leaflet->leaflet_image_image_key}&amp;s=t"/> -->
                         </a>
                         <small>
-	                        <a href="{$www_server}/leaflets/{$leaflet->leaflet_id}/">{$leaflet->title|stripslashes}</a>
+	                        <a href="{$www_server}/leaflets/{$leaflet->leaflet_id}/">{$leaflet->title}</a>
 	                    </small>
                         {if $is_geo}
                             <span class="distance">
